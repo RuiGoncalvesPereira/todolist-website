@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 0px 100px 70px;
+    background-color: #ac90d8c7;
+}
+
+.container {
+    width: 50%;
+    margin: 0;
+    text-align: left;
+}
+
+.aufgabe-hinzufuegen {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#plusicon {
+    vertical-align: middle;
+    margin-left: 10px;
+    height: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form select,
+form button {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form select {
+    width: calc(100% - 16px);
+}
+
+form button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 130px;
+    align-self: flex-end;
+}
+
+form button:hover {
+    background-color: #007bff;
+}
+
+.fehlermeldung {
+    color: red;
+}
+
+#aufgabenContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.aufgabe {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    word-wrap: break-word;
+}
+
+.aufgabe.erweitert {
+    transform: scale(1.05);
+}
+
+.aufgabe h3 {
+    margin: 0 0 10px;
+}
+
+.aufgabe p {
+    margin: 5px 0;
+}
+
+.aufgabe p.bold {
+    font-weight: bold;
+}
+
+.aufgabe .highlight-sofort {
+    background-color: red;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.aufgabe .highlight-einplanen {
+    background-color: yellow;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.aufgabe .highlight-gibab {
+    background-color: lightgreen;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.aufgabe .highlight-weg {
+    background-color: green;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.aufgabe button {
+    margin: 5px 5px 0 0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+button.abbrechen {
+    background-color: #dc3545;
+}
+
+button.abbrechen:hover {
+    background-color: #c82333;
+}
+
+button.abschliessen {
+    background-color: #28a745;
+}
+
+button.abschliessen:hover {
+    background-color: #218838;
+}
+
+button.bearbeiten {
+    background-color: #007bff;
+}
+
+button.bearbeiten:hover {
+    background-color: #0056b3;
+}
+
+button.loeschen {
+    background-color: #dc3545;
+}
+
+button.loeschen:hover {
+    background-color: #c82333;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    width: 70%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.popup.open {
+    display: block;
+}
+
+#fortschrittWert,
+#editFortschrittWert {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#suche {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.erweitert-content p.beschreibung {
+    max-height: 50px;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.checkbox-container label {
+    flex: 1;
+    text-align: left;
+}
+
+.checkbox-container input {
+    height: 20px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#bearbeitenFormular {
+    padding-right: 20px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ffffff;
+    margin: 20px 0;
+}
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #ffffff;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+  }
